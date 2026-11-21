@@ -1,0 +1,14 @@
+[
+  {
+    "id": "workspace-export",
+    "title": "Workspace export",
+    "terms": ["download", "archive", "zip"],
+    "excerpt": "In Relay Desk, open Workspace Settings → Export. Select Download archive to save a ZIP of your workspace's boards and notes."
+  },
+  {
+    "id": "notification-settings",
+    "title": "Notification settings",
+    "terms": ["mute", "digest", "alerts"],
+    "excerpt": "In Relay Desk, open Preferences → Notifications. Choose Immediate, Daily digest, or Muted for board updates."
+  }
+]

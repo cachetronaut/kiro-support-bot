@@ -12,7 +12,7 @@ Make the held-reply demo reproducible from a fresh synthetic ticket.
   - _Requirements: 1.2, 2.1, 2.2_
 - [x] 3. Implement the read-only ledger tool, wire the workspace MCP settings, and verify the approval flow through the queue and MCP protocol.
   - _Requirements: 2.4_
-- [ ] 4. Verify the ledger tool from a Kiro session.
+- [x] 4. Verify the ledger tool from a Kiro session.
   - _Requirements: 2.4_
 
 ## Notes

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "relay-desk-ledger": {
+      "command": "node",
+      "args": ["src/ledger-mcp.mjs"]
+    }
+  }
+}

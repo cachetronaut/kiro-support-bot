@@ -110,14 +110,18 @@ function analyzeTicket(ticket, ledgerDir) {
   }
 }
 
-try {
-  const [ticketFile, ledgerDir = '.local/ledger', ...rest] = process.argv.slice(2);
-  if (!ticketFile || rest.length) {
-    throw new Error('Usage: node src/support.mjs <ticket.json> [ledger-directory]');
+export { searchManual };
+
+if (import.meta.main ?? (process.argv[1] === import.meta.filename)) {
+  try {
+    const [ticketFile, ledgerDir = '.local/ledger', ...rest] = process.argv.slice(2);
+    if (!ticketFile || rest.length) {
+      throw new Error('Usage: node src/support.mjs <ticket.json> [ledger-directory]');
+    }
+    const decision = analyzeTicket(readTicket(ticketFile), ledgerDir);
+    console.log(JSON.stringify(decision, null, 2));
+  } catch (error) {
+    console.error('Intake failed: ' + error.message);
+    process.exitCode = 1;
   }
-  const decision = analyzeTicket(readTicket(ticketFile), ledgerDir);
-  console.log(JSON.stringify(decision, null, 2));
-} catch (error) {
-  console.error('Intake failed: ' + error.message);
-  process.exitCode = 1;
 }

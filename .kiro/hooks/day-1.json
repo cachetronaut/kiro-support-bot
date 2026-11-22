@@ -2,12 +2,12 @@
   "version": "v1",
   "hooks": [
     {
-      "name": "Verify the ticket ledger",
-      "description": "Run the local Day 1 gate after a Kiro spec task completes.",
+      "name": "Verify the ticket ledger and approval flow",
+      "description": "Run both local gates after a Kiro spec task completes.",
       "trigger": "PostTaskExec",
       "action": {
         "type": "command",
-        "command": "node scripts/verify-day-1.mjs"
+        "command": "node scripts/verify-day-1.mjs && node scripts/verify-day-2.mjs"
       }
     }
   ]
